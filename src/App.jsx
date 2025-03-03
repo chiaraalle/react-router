@@ -6,6 +6,9 @@ Bonus
 - Centralizzare la Navbar grazie a un Layout
 - Gestire la classe active */
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from "./assets/Pages/Home";
+import AboutUs from "./assets/Pages/AboutUs"; 
+import Posts from "./assets/Pages/Posts";
 
 function App() {
 
