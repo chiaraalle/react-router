@@ -17,10 +17,11 @@ function App() {
     <>
       <BrowserRouter> {/* BrowserRouter è il componente principale che ci permette di utilizzare il routing */}
         <Routes> {/* Routes è il componente che ci permette di definire le rotte della nostra applicazione */}
-          <Route element={<DefaultLayout />} /> {/* Route è il componente che ci permette di definire quale componente deve essere mostrato per un determinato percorso (URL) */}
-          <Route path="/" element={<Home />} /> {/* Route è il componente che ci permette di definire quale componente deve essere mostrato per un determinato percorso (URL) */}
-          <Route path="/about-us" element={<AboutUs />} />
-          <Route path="/posts" element={<Posts />} />
+          <Route element={<DefaultLayout />}> 
+            <Route path="/" element={<Home />} /> {/* Route è il componente che ci permette di definire quale componente deve essere mostrato per un determinato percorso (URL) */}
+            <Route path="/about-us" element={<AboutUs />} />
+            <Route path="/posts" element={<Posts />} />
+          </Route>  
         </Routes>
       </BrowserRouter>
       

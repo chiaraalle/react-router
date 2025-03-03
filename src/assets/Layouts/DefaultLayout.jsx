@@ -1,10 +1,11 @@
 import { Outlet } from "react-router-dom";
+import Header from "../components/Header";
 
 function DefaultLayout(){
     return (
         <>
-        <header><h1>titolo</h1></header>
-        <Outlet /> {/* Outlet è il componente che ci permette di definire dove verranno visualizzati i componenti figli all'interno di un layout */}
+            <Header /> {/* Header è il componente che ci permette di visualizzare la barra di navigazione */}
+            <Outlet /> {/* Outlet è il componente che ci permette di definire dove verranno visualizzati i componenti figli all'interno di un layout */}
         </>
     )
 }
