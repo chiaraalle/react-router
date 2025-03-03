@@ -9,6 +9,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./assets/Pages/Home";
 import AboutUs from "./assets/Pages/AboutUs"; 
 import Posts from "./assets/Pages/Posts";
+import DefaultLayout from "./assets/Layouts/DefaultLayout";
 
 function App() {
 
@@ -16,8 +17,9 @@ function App() {
     <>
       <BrowserRouter> {/* BrowserRouter è il componente principale che ci permette di utilizzare il routing */}
         <Routes> {/* Routes è il componente che ci permette di definire le rotte della nostra applicazione */}
+          <Route element={<DefaultLayout />} /> {/* Route è il componente che ci permette di definire quale componente deve essere mostrato per un determinato percorso (URL) */}
           <Route path="/" element={<Home />} /> {/* Route è il componente che ci permette di definire quale componente deve essere mostrato per un determinato percorso (URL) */}
-          <Route path="/aboutUs" element={<AboutUs />} />
+          <Route path="/about-us" element={<AboutUs />} />
           <Route path="/posts" element={<Posts />} />
         </Routes>
       </BrowserRouter>
