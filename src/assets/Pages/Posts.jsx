@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Link, NavLink } from "react-router-dom";
 
 function Posts() {
     const [posts, setPosts] = useState([]);
@@ -23,6 +24,10 @@ function Posts() {
                             <div className="card-body">
                                 <h5 className="card-title">{post.title}</h5>
                                 <p className="card-text">{post.content}</p>
+
+                                <Link to={`/posts/${post.id}`}>
+                                    <button className="btn-post">vai al post</button>
+                                </Link>
                             </div>
                         </div>
                     ))}

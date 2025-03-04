@@ -14,7 +14,9 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./assets/Pages/Home";
 import AboutUs from "./assets/Pages/AboutUs"; 
 import Posts from "./assets/Pages/Posts";
+import SinglePost from "./assets/Pages/SinglePost";
 import DefaultLayout from "./assets/Layouts/DefaultLayout";
+
 
 function App() {
 
@@ -26,6 +28,7 @@ function App() {
             <Route path="/" element={<Home />} /> {/* Route è il componente che ci permette di definire quale componente deve essere mostrato per un determinato percorso (URL) */}
             <Route path="/about-us" element={<AboutUs />} />
             <Route path="/posts" element={<Posts />} />
+            <Route path="/posts/:id" element={<SinglePost />} />
           </Route>  
         </Routes>
       </BrowserRouter>
